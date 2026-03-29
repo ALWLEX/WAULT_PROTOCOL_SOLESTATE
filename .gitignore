@@ -1,0 +1,35 @@
+# Anchor / Solana
+target/
+.anchor/
+test-ledger/
+.keys/
+
+# Node
+node_modules/
+dist/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.production
+oracle/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.so
+*.dylib
+
+# Logs
+*.log
+npm-debug.log*

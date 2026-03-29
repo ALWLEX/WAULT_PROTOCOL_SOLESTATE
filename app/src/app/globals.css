@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --wault-primary: #6C5CE7;
+  --wault-secondary: #00D2D3;
+}
+
+body {
+  @apply bg-wault-darker text-wault-text font-sans;
+}
+
+@layer components {
+  .wault-card {
+    @apply bg-wault-card border border-wault-border rounded-2xl p-6 
+    backdrop-blur-xl transition-all duration-300
+    hover:border-wault-primary/50 hover:shadow-lg hover:shadow-wault-primary/10;
+  }
+
+  .wault-btn-primary {
+    @apply bg-wault-gradient text-white font-semibold py-3 px-8 rounded-xl
+    transition-all duration-300 transform hover:scale-105
+    hover:shadow-lg hover:shadow-wault-primary/30
+    active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .wault-btn-secondary {
+    @apply border border-wault-primary text-wault-primary font-semibold py-3 px-8 rounded-xl
+    transition-all duration-300 hover:bg-wault-primary/10
+    active:scale-95;
+  }
+
+  .wault-input {
+    @apply bg-wault-darker border border-wault-border rounded-xl px-4 py-3
+    text-wault-text placeholder-wault-muted
+    focus:outline-none focus:border-wault-primary focus:ring-1 focus:ring-wault-primary/50
+    transition-all duration-200;
+  }
+
+  .wault-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .wault-badge-verified {
+    @apply wault-badge bg-green-500/20 text-green-400;
+  }
+
+  .wault-badge-pending {
+    @apply wault-badge bg-yellow-500/20 text-yellow-400;
+  }
+
+  .wault-badge-active {
+    @apply wault-badge bg-wault-primary/20 text-wault-primary;
+  }
+
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 60px rgba(108, 92, 231, 0.3);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 60px rgba(0, 210, 211, 0.3);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-wault-gradient;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-wault-darker;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-wault-border rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-wault-primary/50;
+}
+
+/* Wallet Adapter Overrides */
+.wallet-adapter-button {
+  @apply bg-wault-gradient rounded-xl font-semibold !important;
+}

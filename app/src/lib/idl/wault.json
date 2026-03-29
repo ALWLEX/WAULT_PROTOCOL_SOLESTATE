@@ -1,0 +1,10 @@
+{
+  "_note": "This file is auto-generated after 'anchor build'. Replace this placeholder with the actual IDL from target/idl/wault.json after deployment.",
+  "version": "0.1.0",
+  "name": "wault",
+  "instructions": [],
+  "accounts": [],
+  "types": [],
+  "events": [],
+  "errors": []
+}
